@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Su7-zw-g3q">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat Bot View Controller-->
+        <scene sceneID="q1k-p3-IA1">
+            <objects>
+                <viewController id="mqk-Yg-tGF" customClass="ChatBotViewController" customModule="eGovernanceChatBot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L5g-cX-ubx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ADL-C2-0su">
+                                <rect key="frame" x="0.0" y="64" width="375" height="535"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="535" id="pRn-PC-3HG"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="mqk-Yg-tGF" id="4oW-xp-SrB"/>
+                                    <outlet property="delegate" destination="mqk-Yg-tGF" id="3ak-qj-7qC"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDq-r4-eWw">
+                                <rect key="frame" x="0.0" y="600" width="375" height="68"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lSY-y4-xa5">
+                                        <rect key="frame" x="8" y="17" width="298" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="nRw-3o-byv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="alphabet"/>
+                                    </textView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Btb-5z-kPB" customClass="GradientView" customModule="eGovernanceChatBot" customModuleProvider="target">
+                                        <rect key="frame" x="314" y="9" width="50" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbx-Gf-Ohw">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Azi-I7-d4g"/>
+                                                    <constraint firstAttribute="width" constant="50" id="l11-2c-nCu"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="send-button">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="Send:" destination="mqk-Yg-tGF" eventType="touchUpInside" id="meA-Cg-4wO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2b-MY-UaG">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="microphoneOn"/>
+                                                <connections>
+                                                    <action selector="mic_Action:" destination="mqk-Yg-tGF" eventType="touchUpInside" id="uEc-Ss-p53"/>
+                                                    <action selector="mic_touchdown_on:" destination="mqk-Yg-tGF" eventType="touchDown" id="3kF-rp-cOl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Jbx-Gf-Ohw" secondAttribute="bottom" id="5Pc-ur-cvw"/>
+                                            <constraint firstAttribute="width" constant="50" id="L1w-ty-asX"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jbx-Gf-Ohw" secondAttribute="trailing" id="hci-mC-M7W"/>
+                                            <constraint firstAttribute="bottom" secondItem="Jbx-Gf-Ohw" secondAttribute="bottom" id="mCS-Wq-nY9"/>
+                                            <constraint firstItem="Jbx-Gf-Ohw" firstAttribute="top" secondItem="Btb-5z-kPB" secondAttribute="top" id="nQf-lB-6pi"/>
+                                            <constraint firstAttribute="height" constant="50" id="pCK-5f-QnK"/>
+                                            <constraint firstAttribute="trailing" secondItem="Jbx-Gf-Ohw" secondAttribute="trailing" id="rQr-qz-zoJ"/>
+                                            <constraint firstItem="Jbx-Gf-Ohw" firstAttribute="leading" secondItem="Btb-5z-kPB" secondAttribute="leading" id="ysu-mw-z6F"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                <color key="value" name="Grav1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                <color key="value" name="Grav2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="lSY-y4-xa5" firstAttribute="leading" secondItem="kDq-r4-eWw" secondAttribute="leading" constant="8" id="0vg-sF-T0u"/>
+                                    <constraint firstAttribute="trailing" secondItem="Btb-5z-kPB" secondAttribute="trailing" constant="11" id="46F-sn-7dq"/>
+                                    <constraint firstAttribute="height" constant="68" id="9zQ-Ye-TH0"/>
+                                    <constraint firstAttribute="bottom" secondItem="Btb-5z-kPB" secondAttribute="bottom" constant="9" id="CLt-jX-rkR"/>
+                                    <constraint firstItem="lSY-y4-xa5" firstAttribute="top" secondItem="kDq-r4-eWw" secondAttribute="top" constant="17" id="GKo-en-rqa"/>
+                                    <constraint firstAttribute="trailing" secondItem="lSY-y4-xa5" secondAttribute="trailing" constant="69" id="aYE-Vs-7HC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94893664119999999" green="0.94907277820000002" blue="0.94890671969999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kDq-r4-eWw" firstAttribute="bottom" secondItem="win-tI-qRf" secondAttribute="bottom" constant="1" id="NX1-Wd-XqB"/>
+                            <constraint firstItem="kDq-r4-eWw" firstAttribute="top" secondItem="ADL-C2-0su" secondAttribute="bottom" constant="1" id="Slh-nQ-37I"/>
+                            <constraint firstItem="ADL-C2-0su" firstAttribute="trailing" secondItem="win-tI-qRf" secondAttribute="trailing" id="d3q-L6-Ugb"/>
+                            <constraint firstItem="kDq-r4-eWw" firstAttribute="leading" secondItem="win-tI-qRf" secondAttribute="leading" id="dDA-gX-dAS"/>
+                            <constraint firstItem="ADL-C2-0su" firstAttribute="leading" secondItem="win-tI-qRf" secondAttribute="leading" id="ez1-SG-gS5"/>
+                            <constraint firstItem="ADL-C2-0su" firstAttribute="top" secondItem="win-tI-qRf" secondAttribute="top" id="pa8-1o-WVK"/>
+                            <constraint firstItem="kDq-r4-eWw" firstAttribute="trailing" secondItem="win-tI-qRf" secondAttribute="trailing" id="yMf-tF-skE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="win-tI-qRf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eRd-Zj-IEJ">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="JbS-j8-Z4r">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="u3h-G4-ZW8">
+                                <rect key="frame" x="16" y="6" width="148" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                <state key="normal" title="My Chat Layout"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="MessageText" destination="lSY-y4-xa5" id="sV7-wx-3hB"/>
+                        <outlet property="bgviewheightconstraint" destination="9zQ-Ye-TH0" id="YO3-TB-dgM"/>
+                        <outlet property="chatBotTableView" destination="ADL-C2-0su" id="kba-SH-W0E"/>
+                        <outlet property="messageview" destination="kDq-r4-eWw" id="4cI-IK-0T5"/>
+                        <outlet property="micbutton_outlet" destination="v2b-MY-UaG" id="Ikw-AF-itb"/>
+                        <outlet property="sendbutton_outlet" destination="Jbx-Gf-Ohw" id="ngX-bq-K9R"/>
+                        <outlet property="sendviewgradient" destination="Btb-5z-kPB" id="duD-Og-hbb"/>
+                        <outlet property="textviewheightconstraint" destination="nRw-3o-byv" id="T6a-Qd-n36"/>
+                        <outlet property="totalheightconstraint" destination="pRn-PC-3HG" id="hiv-Bi-mCw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dXl-4l-o9r" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="808.79999999999995" y="117.39130434782609"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KZz-9U-JFL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Su7-zw-g3q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fP8-mv-2Qc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" name="Grav2"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mqk-Yg-tGF" kind="relationship" relationship="rootViewController" id="K5t-00-c44"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H32-qa-uEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="microphoneOn" width="15" height="20"/>
+        <image name="send-button" width="20" height="20"/>
+        <namedColor name="Grav1">
+            <color red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Grav2">
+            <color red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

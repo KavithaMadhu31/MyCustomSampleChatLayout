@@ -1,0 +1,20 @@
+PODS:
+  - IQKeyboardManagerSwift (6.2.0)
+  - SwiftSiriWaveformView (2.4.0)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - SwiftSiriWaveformView
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - IQKeyboardManagerSwift
+    - SwiftSiriWaveformView
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
+  SwiftSiriWaveformView: baa04ed2089e854af00ea54c38a7700ca43d7ae0
+
+PODFILE CHECKSUM: d9bd523aeeb60041fedfcfc5ed9744ad51df9e30
+
+COCOAPODS: 1.5.3

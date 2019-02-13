@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="textLabelLeft" rowHeight="77" id="Rwl-v9-7G3" customClass="TextLabelLeft" customModule="eGovernanceChatBot" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="425" height="77"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rwl-v9-7G3" id="T27-sg-LTG">
+                <rect key="frame" x="0.0" y="0.0" width="425" height="76.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ItZ-Oh-FIK">
+                        <rect key="frame" x="387" y="38.5" width="30" height="30"/>
+                        <color key="backgroundColor" red="0.48201155662536621" green="0.7475440502166748" blue="0.69779855012893677" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="94g-9g-Y8I"/>
+                            <constraint firstAttribute="width" constant="30" id="pIc-vF-CcP"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cz-Di-Jv6">
+                        <rect key="frame" x="321" y="32" width="58" height="36.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4K-SW-HNw">
+                                <rect key="frame" x="8" y="8" width="42" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="42f-dF-X2q"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="U5c-TX-R6m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="Grav2"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="1dm-Sw-LaV"/>
+                            <constraint firstItem="r4K-SW-HNw" firstAttribute="top" secondItem="9cz-Di-Jv6" secondAttribute="top" constant="8" id="5zo-FV-Ccy"/>
+                            <constraint firstAttribute="bottom" secondItem="r4K-SW-HNw" secondAttribute="bottom" constant="8" id="HPW-Xb-ovh"/>
+                            <constraint firstAttribute="trailing" secondItem="r4K-SW-HNw" secondAttribute="trailing" constant="8" id="Z8q-uD-Gax"/>
+                            <constraint firstItem="r4K-SW-HNw" firstAttribute="leading" secondItem="9cz-Di-Jv6" secondAttribute="leading" constant="8" id="qz4-Ny-VA4"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" name="Grav1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" name="Grav2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ItZ-Oh-FIK" secondAttribute="bottom" constant="8" id="4E8-lu-REl"/>
+                    <constraint firstAttribute="bottom" secondItem="9cz-Di-Jv6" secondAttribute="bottom" constant="8" id="H09-vC-eAQ"/>
+                    <constraint firstItem="9cz-Di-Jv6" firstAttribute="top" secondItem="T27-sg-LTG" secondAttribute="top" constant="32" id="L9g-hU-qvZ"/>
+                    <constraint firstItem="9cz-Di-Jv6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="T27-sg-LTG" secondAttribute="leading" constant="50" id="Ok1-e2-fpb"/>
+                    <constraint firstItem="ItZ-Oh-FIK" firstAttribute="leading" secondItem="9cz-Di-Jv6" secondAttribute="trailing" constant="8" id="SQM-Oq-hL0"/>
+                    <constraint firstAttribute="trailing" secondItem="ItZ-Oh-FIK" secondAttribute="trailing" constant="8" id="s4n-eK-Gug"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="LeftLabel" destination="r4K-SW-HNw" id="EMM-Zv-JZm"/>
+                <outlet property="leftImage" destination="ItZ-Oh-FIK" id="YKX-Yi-v65"/>
+                <outlet property="leftView" destination="9cz-Di-Jv6" id="dDD-BY-igI"/>
+            </connections>
+            <point key="canvasLocation" x="-130.40000000000001" y="-12.143928035982009"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Grav1">
+            <color red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Grav2">
+            <color red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
